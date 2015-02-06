@@ -4,13 +4,6 @@ if (Meteor.isClient) {
         this.render('/signup');
     });
 
-    Router.route('/signup', function() {
-        this.render();
-    });
-
-    Router.route('/signin', function() {
-        this.render();
-    });
 
     Router.route('/terms-of-use', function() {
         this.render();
@@ -18,18 +11,18 @@ if (Meteor.isClient) {
 
     AccountsTemplates.configureRoute('signIn', {
         name: 'signin',
-        path: '/login',
-        template: 'myLogin',
-        layoutTemplate: 'myLayout',
-        redirect: '/user-profile',
+        path: '/signin',
+        template: 'signin',
+        layoutTemplate: 'signin',
+        redirect: '/signin',
     });
 
     AccountsTemplates.configureRoute('signUp', {
-        name: 'signin',
-        path: '/login',
-        template: 'myLogin',
-        layoutTemplate: 'myLayout',
-        redirect: '/user-profile',
+        name: 'signup',
+        path: '/signup',
+        template: 'signup',
+        layoutTemplate: 'signup',
+        redirect: '/signup',
     });
 }
 
